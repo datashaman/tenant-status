@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\IncidentController;
+use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\VentureController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +29,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::resources([
+        'incidents' => IncidentController::class,
+        'updates' => UpdateController::class,
+        'users' => UserController::class,
+        'ventures' => VentureController::class,
+    ]);
 });

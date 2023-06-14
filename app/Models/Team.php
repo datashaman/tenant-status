@@ -41,4 +41,9 @@ class Team extends JetstreamTeam
         'updated' => TeamUpdated::class,
         'deleted' => TeamDeleted::class,
     ];
+
+    public function ventures(): HasMany
+    {
+        return $this->hasMany(Venture::class);
+    }
 }
