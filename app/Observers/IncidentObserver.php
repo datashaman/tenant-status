@@ -14,6 +14,7 @@ class IncidentObserver
         $incident->updates()->create([
             'content' => trans('incident-statuses.investigating'),
             'created_by' => $incident->created_by,
+            'status' => 'investigating',
         ]);
     }
 

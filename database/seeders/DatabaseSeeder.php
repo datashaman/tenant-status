@@ -58,6 +58,7 @@ class DatabaseSeeder extends Seeder
                 ], [
                     'created_by' => $user->id,
                     'resolve_incident' => false,
+                    'status' => 'update',
                 ]);
 
             }

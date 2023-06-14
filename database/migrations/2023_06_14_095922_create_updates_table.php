@@ -17,6 +17,7 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
+            $table->string('status')->default('update');
             $table->text('content');
             $table->boolean('resolve_incident')->default(false);
             $table->foreignId('created_by')->constrained(table: 'users');
