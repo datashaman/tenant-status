@@ -13,7 +13,7 @@ class VenturePolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->hasTeamRole($user->team, 'admin');
     }
 
     /**
